@@ -268,3 +268,14 @@
   new PureCounter();
 
 })()
+
+let a = new Date().getFullYear();
+document.getElementById("myAge").innerText = a - 2002; //my age
+var elements = document.querySelectorAll('.it_experience');
+    elements.forEach(function(element){
+        element.innerText = a - 2022;
+    }); //my it experience
+var elements = document.querySelectorAll('.currentYear');
+    elements.forEach(function(element){
+        element.innerText = a;
+    });
