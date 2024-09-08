@@ -57,12 +57,12 @@
       <div class="social-links">
         <a href="https://x.com/La_casse_?s=20" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="https://wa.me/+25777568903" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100073426981729&mibextid=jtWzXIAxfKx1VBOC" class="facebook"><i
-            class="bi bi-facebook"></i></a>
+        <!-- <a href="https://www.facebook.com/profile.php?id=100073426981729&mibextid=jtWzXIAxfKx1VBOC" class="facebook"><i
+            class="bi bi-facebook"></i></a> -->
         <a href="https://www.instagram.com/sama__ndari?igsh=MWFic2todzA4aGZteg==" class="instagram"><i
             class="bi bi-instagram"></i></a>
         <a href="mailto:cezaremardini10@gmail.com" class="google-plus"><i class="bi bi-envelope-at"></i></a>
-      </div>
+      <a href="https://github.com/Sama-ndari" class="github"><i class="bi bi-github"></i></a></div>
     </div>
   </section><!-- End Hero -->
 
@@ -797,18 +797,20 @@
               </div>
             </div> <!-- End testimonial item -->
               
-              <!-- <div class="swiper-slide">
-                            <div class="testimonial-item">
-                              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                              <h3>Brunel Neree</h3>
-                              <h4>Designer</h4>
-                              <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                It was a pleasure
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                              </p>
-                            </div>
-                          </div>End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/Bazagod.jpg" class="testimonial-img" alt="">
+                <h3>Bazagod</h3>
+                <h4>Web Developer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    By working with Jules César Junior I learned to persevere and learn a lot of things in 
+                    programming for example in frontend in backend I had a lot of advice through César, 
+                    he helps me in my career.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -858,7 +860,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="/" method="post" role="form" class="php-email-form">
+            <form id="contactForm" action="/" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -881,6 +883,35 @@
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
 
+            <script>
+              document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Collect form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.querySelector('textarea[name="message"]').value;
+
+                // Simple validation
+                if (!name || !email || !subject || !message) {
+                  document.querySelector('.error-message').innerText = "All fields are required.";
+                  return;
+                }
+
+                // Simulate sending the data
+                document.querySelector('.loading').style.display = 'block';
+                document.querySelector('.error-message').innerText = '';
+
+                // Simulate a successful submission
+                setTimeout(() => {
+                  document.querySelector('.loading').style.display = 'none';
+                  document.querySelector('.sent-message').style.display = 'block';
+                  // Clear the form
+                  document.getElementById('contactForm').reset();
+                }, 2000); // Simulate a 2-second delay for the "sending" process
+              });
+            </script>
           </div>
 
         </div>
