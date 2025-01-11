@@ -272,7 +272,7 @@
 let a = new Date().getFullYear();
 document.getElementById("current_year").innerText = a;
 document.getElementById("myAge").innerText = a - 2002; //my age
-var elements = document.querySelectorAll('.it_experience');
+var elements = document.querySelectorAll('#it_experience');
     elements.forEach(function(element){
         element.innerText = a - 2022;
     }); //my it experience
