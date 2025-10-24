@@ -624,7 +624,11 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
+  background: transparent; /* Make container background transparent */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+  height: 260px; /* Set a fixed height for alignment */
 }
 
 .portfolio .portfolio-wrap::before {
@@ -745,10 +749,13 @@ section {
   left: 15px;
 }
 
-.portfolio .portfolio-wrap img {
-  max-height: 260px;
-  object-fit: cover;
-  width: 100%;
+#projects .portfolio-wrap img {
+  max-height: 100%; /* Fit within the container's height */
+  max-width: 100%; /* Fit within the container's width */
+  object-fit: contain;
+  background: rgba(69, 80, 91, 0.8); /* Apply background to the image */
+  width: auto; /* Adjust width automatically */
+  height: auto; /* Adjust height automatically */
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
