@@ -78,14 +78,27 @@
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
+      if (window.innerWidth <= 768) {
+        if (window.scrollY > 100) {
+          backtotop.href = '#hero';
+          backtotop.querySelector('i').classList.remove('bi-arrow-down-circle');
+          backtotop.querySelector('i').classList.add('bi-arrow-up-short');
+        } else {
+          backtotop.href = '#about';
+          backtotop.querySelector('i').classList.remove('bi-arrow-up-short');
+          backtotop.querySelector('i').classList.add('bi-arrow-down-circle');
+        }
       } else {
-        backtotop.classList.remove('active')
+        if (window.scrollY > 100) {
+          backtotop.classList.add('active')
+        } else {
+          backtotop.classList.remove('active')
+        }
       }
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
+    window.addEventListener('resize', toggleBacktotop);
   }
 
   /**
@@ -272,7 +285,7 @@
 let a = new Date().getFullYear();
 document.getElementById("current_year").innerText = a;
 document.getElementById("myAge").innerText = a - 2002; //my age
-var elements = document.querySelectorAll('#it_experience');
+var elements = document.querySelectorAll('.it_experience');
     elements.forEach(function(element){
         element.innerText = a - 2022;
     }); //my it experience
