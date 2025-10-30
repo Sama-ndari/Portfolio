@@ -75,9 +75,32 @@
   /**
    * Back to top button
    */
-  let backtotop = select('.back-to-top')
+  let backtotop = select('.back-to-top');
   if (backtotop) {
-    const toggleBacktotop = () => {
+    let scrollTimeout;
+
+    const showButton = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add('active');
+      } else {
+        backtotop.classList.remove('active');
+      }
+    };
+
+    const handleScroll = () => {
+      showButton();
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        // On mobile, keep the button visible if at the top of the page
+        if (window.innerWidth <= 768 && window.scrollY <= 100) {
+          backtotop.classList.add('active');
+        } else {
+          backtotop.classList.remove('active');
+        }
+      }, 1500); // Hide after 1.5 seconds of inactivity
+    };
+
+    const toggleIcon = () => {
       if (window.innerWidth <= 768) {
         if (window.scrollY > 100) {
           backtotop.href = '#hero';
@@ -88,17 +111,18 @@
           backtotop.querySelector('i').classList.remove('bi-arrow-up-short');
           backtotop.querySelector('i').classList.add('bi-arrow-down-circle');
         }
-      } else {
-        if (window.scrollY > 100) {
-          backtotop.classList.add('active')
-        } else {
-          backtotop.classList.remove('active')
-        }
       }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-    window.addEventListener('resize', toggleBacktotop);
+    };
+
+    window.addEventListener('load', () => {
+      handleScroll();
+      toggleIcon();
+    });
+    onscroll(document, () => {
+      handleScroll();
+      toggleIcon();
+    });
+    window.addEventListener('resize', toggleIcon);
   }
 
   /**

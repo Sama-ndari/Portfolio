@@ -41,7 +41,7 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
+  bottom: 85px;
   z-index: 996;
   background: #0563bb;
   width: 40px;
@@ -68,9 +68,9 @@ h6 {
 
 /* Mobile-specific override */
 @media (max-width: 768px) {
-  .back-to-top {
-    visibility: visible; /* Always visible on mobile */
-    opacity: 0.4; /* Dim the button to make it a subtle hint */
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 0.4;
   }
 }
 
