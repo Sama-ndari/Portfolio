@@ -1298,3 +1298,147 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+/*--------------------------------------------------------------
+# Featured Project in Grid
+--------------------------------------------------------------*/
+/* Premium badge */
+.premium-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #64ffda;
+  color: #0a192f;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 4px;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+/* Featured stats - always visible, overlaid on image */
+.portfolio-wrap .featured-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  opacity: 1 !important;
+  z-index: 3;
+  border-top: 2px solid #64ffda;
+}
+
+.portfolio-wrap .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-wrap .stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0563bb;
+  line-height: 1;
+}
+
+.portfolio-wrap .stat-label {
+  font-size: 9px;
+  color: #45505b;
+  text-transform: uppercase;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* Featured actions - hidden by default, shown on hover */
+.portfolio-wrap .featured-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Override the default portfolio-links styling for featured actions */
+.portfolio-wrap .featured-actions a {
+  font-size: 9px !important;
+  margin: 0 !important;
+}
+
+.portfolio-wrap:hover .featured-actions {
+  opacity: 1;
+}
+
+.portfolio-wrap .btn-featured {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 9px;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.portfolio-wrap .btn-featured i {
+  font-size: 10px;
+}
+
+.portfolio-wrap .btn-primary-featured {
+  background: #0563bb;
+  color: #fff;
+  border: 2px solid #0563bb;
+}
+
+.portfolio-wrap .btn-primary-featured:hover {
+  background: #0456a3;
+  color: #fff;
+}
+
+.portfolio-wrap .btn-outline-featured {
+  background: transparent;
+  color: #45505b;
+  border: 2px solid #45505b;
+}
+
+.portfolio-wrap .btn-outline-featured:hover {
+  background: #45505b;
+  color: #fff;
+}
+
+/* Dark mode support */
+body.dark-mode .portfolio-wrap .featured-stats {
+  background: rgba(17, 34, 64, 0.95);
+  border-top-color: #64ffda;
+}
+
+body.dark-mode .portfolio-wrap .stat-value {
+  color: #64ffda;
+}
+
+body.dark-mode .portfolio-wrap .stat-label {
+  color: #8892b0;
+}
+
+body.dark-mode .premium-badge {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+body.dark-mode .portfolio-wrap .btn-outline-featured {
+  color: #ccd6f6;
+  border-color: #64ffda;
+}
+
+body.dark-mode .portfolio-wrap .btn-outline-featured:hover {
+  background: #64ffda;
+  color: #0a192f;
+}
