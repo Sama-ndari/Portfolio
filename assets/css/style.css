@@ -412,7 +412,8 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #728394;
+  color: #45505b; 
+  margin-bottom: 20px;
 }
 
 .about .content ul {
@@ -424,22 +425,31 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .about .content ul strong {
   margin-right: 10px;
+  color: #45505b;
 }
 
 .about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
+  font-size: 18px;
+  margin-right: 15px;
   color: #0563bb;
-  line-height: 0;
+  transition: 0.3s;
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
+.about .content ul li:hover {
+  border-left: 2px dashed #0563bb;
+  background: rgba(5, 99, 187, 0.02);
+  transform: translateX(5px);
 }
+
+.about .content ul li:hover i {
+  color: #ffbb2c; 
+}
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -484,7 +494,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -520,64 +530,125 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Resume
+# Resume 
 --------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #45505b;
+  display: flex;
+  align-items: center;
+}
+
+.resume .resume-title i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #0563bb;
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 35px 30px;
   margin-top: -2px;
-  border-left: 2px solid #0563bb;
+  border-left: 2px dashed #0563bb;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .resume .resume-item h4 {
   line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #0563bb;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
-  background: #f7f8f9;
-  padding: 5px 15px;
+  font-size: 13px;
+  background: rgba(5, 99, 187, 0.06);
+  padding: 4px 16px;
   display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0563bb;
+  border-radius: 4px;
+  border: 1px solid rgba(5, 99, 187, 0.1);
+  text-transform: uppercase;
 }
 
 .resume .resume-item ul {
   padding-left: 20px;
+  list-style: none;
 }
 
 .resume .resume-item ul li {
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.resume .resume-item ul li::before {
+  content: "▹";
+  position: absolute;
+  left: -20px;
+  color: #0563bb;
+  font-weight: bold;
 }
 
 .resume .resume-item:last-child {
   padding-bottom: 0;
+  border-left: 2px dashed transparent; 
 }
 
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50px;
-  left: -9px;
+  left: -8px;
   top: 0;
-  background: #fff;
-  border: 2px solid #0563bb;
+  background: #0563bb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(5, 99, 187, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resume .resume-item:hover::before {
+  background: #ffbb2c; 
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(5, 99, 187, 0.5);
+}
+
+.resume .resume-item a {
+  color: #0563bb;
+  font-weight: 700;
+  transition: 0.3s;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.resume .resume-item a:hover {
+  border-bottom: 1px solid #0563bb;
+  color: #ffbb2c;
+}
+
+.resume .badge {
+  background-color: #0563bb !important;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.asyst-tech {
+  color: #0563bb;
+  font-weight: 700;
+  border-bottom: 2px solid #ffbb2c;
 }
 
 /*--------------------------------------------------------------
@@ -1286,9 +1357,10 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
+  background: #ffbb2c;
   color: #fff;
-  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 187, 44, 0.5);
+  transform: translateY(-3px);
 }
 
 #footer .copyright {
@@ -1301,13 +1373,28 @@ section {
 /*--------------------------------------------------------------
 # Featured Project in Grid
 --------------------------------------------------------------*/
+
+/* Elite Pulse Animation for Flagship Project */
+@keyframes elite-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(5, 99, 187, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(5, 99, 187, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(5, 99, 187, 0); }
+}
+
+.portfolio-item.filter-ai:first-child .portfolio-wrap {
+  border: 2px solid rgba(5, 99, 187, 0.1);
+  box-shadow: 0 0 20px rgba(5, 99, 187, 0.05);
+}
+
+
 /* Premium badge */
 .premium-badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: #64ffda;
-  color: #0a192f;
+  background: linear-gradient(135deg, #0563bb 0%, #00b4db 100%);
+  color: #fff;
+  animation: elite-pulse 2.5s infinite;
   padding: 4px 10px;
   font-size: 11px;
   font-weight: 800;
@@ -1442,3 +1529,5 @@ body.dark-mode .portfolio-wrap .btn-outline-featured:hover {
   background: #64ffda;
   color: #0a192f;
 }
+
+
