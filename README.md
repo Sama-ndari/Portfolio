@@ -1,6 +1,6 @@
 # Jules Cesar Junior Ndayisenga - Personal Portfolio
 
-Personal portfolio website, showcasing my skills, experience, and projects. It's a responsive, single-page application designed to provide a comprehensive overview of my professional profile.
+Personal portfolio website, showcasing my skills, experience, and projects. It's a responsive, single-page application designed to provide a comprehensive overview of my professional profile
 
 ## ✨ Features
 
