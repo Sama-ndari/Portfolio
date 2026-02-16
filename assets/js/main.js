@@ -207,33 +207,112 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Projects section - Isotope masonry layout with show-more
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+    let projectsContainer = select('#projects .portfolio-container');
+    if (projectsContainer) {
+      let projectsIsotope = new Isotope(projectsContainer, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry',
+        masonry: {
+          columnWidth: '.portfolio-sizer',
+          gutter: 0
+        },
+        percentPosition: true,
+        transitionDuration: '0.6s',
+        filter: function(itemElem) {
+          return !itemElem.classList.contains('hidden-item');
+        }
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let projectFilters = select('#projects #portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#projects #portfolio-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        projectFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+        let filterValue = this.getAttribute('data-filter');
+
+        if (filterValue === '*') {
+          projectsIsotope.arrange({ filter: function(itemElem) {
+            if (itemElem.classList.contains('hidden-item') && !itemElem.classList.contains('show-item')) {
+              return false;
+            }
+            return true;
+          }});
+        } else {
+          projectsIsotope.arrange({ filter: function(itemElem) {
+            let matchesFilter = itemElem.classList.contains(filterValue.replace('.', ''));
+            if (itemElem.classList.contains('hidden-item') && !itemElem.classList.contains('show-item')) {
+              return false;
+            }
+            return matchesFilter;
+          }});
+        }
+
+        projectsIsotope.on('arrangeComplete', function() {
+          AOS.refresh();
         });
       }, true);
-    }
 
+      let btnShowMore = select('#btnShowMore');
+      if (btnShowMore) {
+        let expanded = false;
+        btnShowMore.addEventListener('click', function() {
+          expanded = !expanded;
+          let hiddenItems = select('#projects .hidden-item', true);
+
+          hiddenItems.forEach(function(item) {
+            if (expanded) {
+              item.classList.add('show-item');
+            } else {
+              item.classList.remove('show-item');
+            }
+          });
+
+          this.classList.toggle('expanded', expanded);
+          this.querySelector('span').textContent = expanded ? 'Show Less' : 'View All Projects';
+
+          let activeFilter = select('#projects #portfolio-flters li.filter-active');
+          let filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : '*';
+
+          if (filterValue === '*') {
+            projectsIsotope.arrange({ filter: function(itemElem) {
+              if (itemElem.classList.contains('hidden-item') && !itemElem.classList.contains('show-item')) {
+                return false;
+              }
+              return true;
+            }});
+          } else {
+            projectsIsotope.arrange({ filter: function(itemElem) {
+              let matchesFilter = itemElem.classList.contains(filterValue.replace('.', ''));
+              if (itemElem.classList.contains('hidden-item') && !itemElem.classList.contains('show-item')) {
+                return false;
+              }
+              return matchesFilter;
+            }});
+          }
+
+          AOS.refresh();
+        });
+      }
+    }
+  });
+
+  /**
+   * CV section - basic Isotope (no masonry needed)
+   */
+  window.addEventListener('load', () => {
+    let cvContainer = select('#portfolio .portfolio-container');
+    if (cvContainer) {
+      new Isotope(cvContainer, {
+        itemSelector: '.portfolio-item'
+      });
+    }
   });
 
   /**

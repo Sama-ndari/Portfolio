@@ -469,8 +469,10 @@
       </div>
     </section>
 
-    <!-- ======= Projects Section ======= -->
-    <section id="projects" class="portfolio section-bg">
+    <!-- ======= Projects Section (2026 Bento Masonry) ======= -->
+    <section id="projects">
+      <div class="bg-decoration bg-decoration--1"></div>
+      <div class="bg-decoration bg-decoration--2"></div>
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -484,223 +486,344 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-ai">AI Ops</li>
-              <li data-filter=".filter-web">Engineering</li>
-              <li data-filter=".filter-mobile">Mobile</li>
+              <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3-gap"></i> All <span class="filter-count">13</span></li>
+              <li data-filter=".filter-ai"><i class="bi bi-robot"></i> AI Ops <span class="filter-count">7</span></li>
+              <li data-filter=".filter-web"><i class="bi bi-code-slash"></i> Engineering <span class="filter-count">4</span></li>
+              <li data-filter=".filter-mobile"><i class="bi bi-phone"></i> Mobile <span class="filter-count">2</span></li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-sizer"></div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/kirundi/Ijwi-ry-Ikirunndi-AI.png" class="img-fluid" alt="Kirundi AI Ecosystem">
-              <span class="premium-badge">🚀 FLAGSHIP</span>
-              <div class="portfolio-info">
-                <h4>Ijwi ry'Ikirundi AI Ecosystem</h4>
-                <p>Data Engineering / Open Source</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ai/kirundi/Ijwi-ry-Ikirunndi-AI.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ijwi ry'Ikirundi AI Ecosystem"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/ai/kirundi-ecosystem-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://huggingface.co/datasets/Ijwi-ry-Ikirundi-AI/Kirundi_Open_Speech_Dataset" target="_blank" title="Dataset on HuggingFace"><i class="bx bx-data"></i></a>
+          <!-- ===== VISIBLE BY DEFAULT (6 projects) ===== -->
+
+          <!-- 1. FLAGSHIP: Ijwi ry'Ikirundi AI (Wide) -->
+          <div class="portfolio-item filter-ai item-wide">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/kirundi/Ijwi-ry-Ikirunndi-AI.png" alt="Kirundi AI Ecosystem">
+                <span class="project-badge project-badge--flagship"><i class="bi bi-rocket-takeoff"></i> Flagship</span>
+                <span class="project-badge project-badge--status">Active</span>
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/kirundi/Ijwi-ry-Ikirunndi-AI.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Ijwi ry'Ikirundi AI Ecosystem"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Data Engineering / Open Source</span>
+                <h4 class="project-card__title">Ijwi ry'Ikirundi AI Ecosystem</h4>
+                <p class="project-card__desc">Dataset pipeline for low-resource language acquisition. 40,000+ sentences, automated cleaning, and a zero-cost contribution platform.</p>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Python</span>
+                  <span class="tech-chip">Hugging Face</span>
+                  <span class="tech-chip">Git LFS</span>
+                  <span class="tech-chip">Pandas</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/kirundi-ecosystem-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://huggingface.co/datasets/Ijwi-ry-Ikirundi-AI/Kirundi_Open_Speech_Dataset" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-data"></i> Dataset</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/apps/extension/extension.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Samandari Tasky</h4>
-                <p>Add-on</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/apps/extension/extension.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Firefox/Chrome Addon"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/app/extension-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+          <!-- 2. E-Sama POS (Wide - Revenue) -->
+          <div class="portfolio-item filter-mobile item-wide">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/mobile/esama/esama-pos.png" alt="E-Sama POS">
+                <span class="project-badge project-badge--revenue"><i class="bi bi-currency-dollar"></i> Revenue</span>
+                <span class="project-badge project-badge--status">Active</span>
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/mobile/esama/esama-pos.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="E-Sama POS"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Flutter / SaaS / Paying Users</span>
+                <h4 class="project-card__title">E-Sama: Boutique & POS Management</h4>
+                <p class="project-card__desc">Cross-platform POS system with real paying users. Inventory management, invoicing, and sales analytics for local businesses.</p>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Flutter</span>
+                  <span class="tech-chip">Firebase</span>
+                  <span class="tech-chip">SaaS</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/mobile/esama-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://drive.google.com/file/d/1HhG-0U46eTxKDo74Wy1AdXYlABgmqzca/view?usp=sharing" target="_blank" class="btn-action btn-action--demo"><i class="bx bx-download"></i> APK</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/ai/dev-swarm/dev-swarm.png" class="img-fluid" alt="Dev Swarm Agency">
-              <div class="portfolio-info">
-                <h4>Dev Swarm Agency</h4>
-                <p>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">CrewAI</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">Docker</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">Python</span>
-                </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Sama-ndari/dev-swarm-autonomous-agency" target="_blank" title="View Code"><i class="bx bx-code-alt"></i></a>
+          <!-- 3. Samandari Tasky -->
+          <div class="portfolio-item filter-web">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/apps/extension/extension.png" alt="Samandari Tasky">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/apps/extension/extension.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Firefox/Chrome Addon"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Browser Extension</span>
+                <h4 class="project-card__title">Samandari Tasky</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">JavaScript</span>
+                  <span class="tech-chip">Chrome API</span>
+                  <span class="tech-chip">Firefox</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/app/extension-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/rag-blueprint/rag-blueprint.png" class="img-fluid" alt="Enterprise RAG">
-              <div class="portfolio-info">
-                <h4>Enterprise RAG Chatbot</h4>
-                <p>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">Kafka</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">Milvus</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">NestJS</span>
-                </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Sama-ndari/enterprise-rag-chatbot" target="_blank" title="View Code"><i class="bx bx-code-alt"></i></a>
+          <!-- 4. SamandariApp -->
+          <div class="portfolio-item filter-mobile">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/mobile/samapp/samapp2.png" alt="SamandariApp">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/mobile/samapp/samapp2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Productivity Hub"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Mobile Productivity</span>
+                <h4 class="project-card__title">SamandariApp</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Flutter</span>
+                  <span class="tech-chip">Dart</span>
+                  <span class="tech-chip">SQLite</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/mobile/samapp-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://github.com/Sama-ndari/SamandariApp" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/sdr-agent/sdr-agent.png" class="img-fluid" alt="SDR Agent">
-              <div class="portfolio-info">
-                <h4>Autonomous SDR Agent</h4>
-                <p>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">OpenAI SDK</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">Pushover</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">SendGrid</span>
-                </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Sama-ndari/autonomous-sdr-agent" target="_blank" title="View Code"><i class="bx bx-code-alt"></i></a>
+          <!-- 5. Kirundi Contribution Platform -->
+          <div class="portfolio-item filter-web">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/Kirundi_Dataset/kirundi_dataset3.png" alt="Kirundi Contribution App">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/Kirundi_Dataset/kirundi_dataset1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kirundi AI Ecosystem - Dataset &amp; App"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">AI / Data Engineering</span>
+                <h4 class="project-card__title">Kirundi Contribution Platform</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">GitHub Pages</span>
+                  <span class="tech-chip">Apps Script</span>
+                  <span class="tech-chip">Serverless</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/kirundi-ecosystem-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://sama-ndari.github.io/kirundi-contribution-app/" target="_blank" class="btn-action btn-action--demo"><i class="bx bx-play-circle"></i> Try App</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/ai/llm-semantic/llm-semantic.png" class="img-fluid" alt="LLM Research">
-              <div class="portfolio-info">
-                <h4>LLM Semantic Drift Analysis</h4>
-      <p>
-        <span class="badge bg-primary" style="font-size: 0.7rem;">NLP Research</span>
-        <span class="badge bg-primary" style="font-size: 0.7rem;">Embeddings</span>
-        <span class="badge bg-primary" style="font-size: 0.7rem;">DataViz</span>
-      </p>
-                <div class="portfolio-links">
-                  <a href="https://github.com/Sama-ndari/llm-semantic-drift-analysis" target="_blank" title="View Research"><i class="bx bx-code-alt"></i></a>
+          <!-- 6. Burundi Language ID -->
+          <div class="portfolio-item filter-web">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/burundi-lang-id/ai.png" alt="Language ID">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/burundi-lang-id/ai.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Burundi Language ID"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">NLP Classification</span>
+                <h4 class="project-card__title">Burundi Language ID</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Transformers</span>
+                  <span class="tech-chip">HuggingFace</span>
+                  <span class="tech-chip">NLP</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/burundian-lang-id-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://huggingface.co/spaces/samandari/burundi-lang-id" target="_blank" class="btn-action btn-action--demo"><i class="bx bx-play-circle"></i> Demo</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/mobile/samapp/samapp2.png" class="img-fluid" alt="SamandariApp">
-              <div class="portfolio-info">
-                <h4>SamandariApp</h4>
-                <p>Flutter Productivity Hub</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/mobile/samapp/samapp2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Productivity Hub"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/mobile/samapp-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
-                  <a href="https://github.com/Sama-ndari/SamandariApp" target="_blank" title="View Code"><i class="bx bx-code-alt"></i></a>
+          <!-- ===== HIDDEN (View All Projects to reveal) ===== -->
+
+          <!-- 7. Dev Swarm Agency -->
+          <div class="portfolio-item filter-ai hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/dev-swarm/dev-swarm.png" alt="Dev Swarm Agency">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/dev-swarm/dev-swarm.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dev Swarm Agency"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Multi-Agent System</span>
+                <h4 class="project-card__title">Dev Swarm Agency</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">CrewAI</span>
+                  <span class="tech-chip">Docker</span>
+                  <span class="tech-chip">Python</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="https://github.com/Sama-ndari/dev-swarm-autonomous-agency" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/Kirundi_Dataset/kirundi_dataset3.png" class="img-fluid" alt="Kirundi AI Ecosystem">
-              <div class="portfolio-info">
-                <h4>Kirundi AI Ecosystem</h4>
-                <p>AI / Data Engineering</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ai/Kirundi_Dataset/kirundi_dataset1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kirundi AI Ecosystem - Dataset &amp; App"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/ai/kirundi-ecosystem-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://sama-ndari.github.io/kirundi-contribution-app/" title="Try the Contribution App" target="_blank"><i class="bx bx-info-circle"></i></a>
+          <!-- 8. Enterprise RAG Chatbot -->
+          <div class="portfolio-item filter-ai hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/rag-blueprint/rag-blueprint.png" alt="Enterprise RAG">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/rag-blueprint/rag-blueprint.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Enterprise RAG Chatbot"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Enterprise AI</span>
+                <h4 class="project-card__title">Enterprise RAG Chatbot</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Kafka</span>
+                  <span class="tech-chip">Milvus</span>
+                  <span class="tech-chip">NestJS</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="https://github.com/Sama-ndari/enterprise-rag-chatbot" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/burundi-lang-id/ai.png" class="img-fluid" alt="Language ID">
-              <div class="portfolio-info">
-                <h4>Burundi Language ID</h4>
-                <p>NLP Classification Model</p>
-                <div class="portfolio-links">
-                  <a href="portfolio/ai/burundian-lang-id-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
-                  <a href="https://huggingface.co/spaces/samandari/burundi-lang-id" target="_blank" title="HuggingFace Demo"><i class="bx bx-play-circle"></i></a>
+          <!-- 9. Autonomous SDR Agent -->
+          <div class="portfolio-item filter-ai hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/sdr-agent/sdr-agent.png" alt="SDR Agent">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/sdr-agent/sdr-agent.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Autonomous SDR Agent"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Autonomous Agent</span>
+                <h4 class="project-card__title">Autonomous SDR Agent</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">OpenAI SDK</span>
+                  <span class="tech-chip">Pushover</span>
+                  <span class="tech-chip">SendGrid</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="https://github.com/Sama-ndari/autonomous-sdr-agent" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/personal-ai-clone/personal-ai.png" class="img-fluid" alt="Personal AI Clone">
-              <div class="portfolio-info">
-                <h4>Personal AI Clone</h4>
-                <p>RAG + Tool Calling Loop</p>
-                <div class="portfolio-links">
-                  <a href="portfolio/ai/personal-ai-clone.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://github.com/Sama-ndari/personal-ai-clone" target="_blank" title="View Code"><i class="bx bx-code-alt"></i></a>
-                  <a href="https://44c046f3ea50c2195e.gradio.live/" title="Live Demo (HuggingFace)"><i class="bx bx-play-circle"></i></a>
-                  
+          <!-- 10. SentinelAI SOC Assistant -->
+          <div class="portfolio-item filter-ai hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/sentinel/sentinel-1.png" alt="SentinelAI SOC Assistant">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/sentinel/sentinel-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SentinelAI SOC Assistant"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Cybersecurity AI</span>
+                <h4 class="project-card__title">SentinelAI SOC Assistant</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">FastAPI</span>
+                  <span class="tech-chip">OpenAI</span>
+                  <span class="tech-chip">MITRE ATT&CK</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/sentinel-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://github.com/Sama-ndari/sentinelai-soc-assistant" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- AI Interview Simulator -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/ai-interviewer/AI-Interviewer1.png" class="img-fluid" alt="AI Interview Simulator">
-              <div class="portfolio-info">
-                <h4>AI Interview Simulator</h4>
-                <p>Streamlit / HR Tech</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ai/ai-interviewer/AI-Interviewer1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="AI Interview Simulator"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/ai/ai-interviewer-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://interview-tool-00tfo4nj6mxyp.streamlit.app/" title="Try Live Demo" target="_blank"><i class="bx bx-play-circle"></i></a>
-                  <a href="https://github.com/Sama-ndari/Interview-tool" title="View on GitHub" target="_blank"><i class="bx bx-code-alt"></i></a>
+          <!-- 11. LLM Semantic Drift Analysis -->
+          <div class="portfolio-item filter-ai hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/llm-semantic/llm-semantic.png" alt="LLM Research">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/llm-semantic/llm-semantic.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="LLM Semantic Drift Analysis"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">NLP Research</span>
+                <h4 class="project-card__title">LLM Semantic Drift Analysis</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Embeddings</span>
+                  <span class="tech-chip">DataViz</span>
+                  <span class="tech-chip">NLP</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="https://github.com/Sama-ndari/llm-semantic-drift-analysis" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Research</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SentinelAI SOC Assistant -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ai/sentinel/sentinel-1.png" class="img-fluid" alt="SentinelAI SOC Assistant">
-              <div class="portfolio-info">
-                <h4>SentinelAI SOC Assistant</h4>
-                <p>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">FastAPI</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">OpenAI</span>
-                  <span class="badge bg-primary" style="font-size: 0.7rem;">MITRE ATT&CK</span>
-                </p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ai/sentinel/sentinel-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="SentinelAI SOC Assistant"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/ai/sentinel-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://github.com/Sama-ndari/sentinelai-soc-assistant" title="View on GitHub" target="_blank"><i class="bx bx-code-alt"></i></a>
+          <!-- 12. Personal AI Clone -->
+          <div class="portfolio-item filter-web hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/personal-ai-clone/personal-ai.png" alt="Personal AI Clone">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/personal-ai-clone/personal-ai.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Personal AI Clone"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">RAG + Tool Calling</span>
+                <h4 class="project-card__title">Personal AI Clone</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">OpenAI</span>
+                  <span class="tech-chip">RAG</span>
+                  <span class="tech-chip">Gradio</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/personal-ai-clone.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://github.com/Sama-ndari/personal-ai-clone" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- E-Sama: Boutique & POS Management -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/mobile/esama/esama-pos.png" class="img-fluid" alt="E-Sama POS">
-              <span class="premium-badge">💰 REVENUE</span>
-              <div class="portfolio-info">
-                <h4>E-Sama: Boutique & POS</h4>
-                <p>Flutter / SaaS / Paying Users</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/mobile/esama/esama-pos.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="E-Sama POS"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio/mobile/esama-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
-                  <a href="https://drive.google.com/file/d/1HhG-0U46eTxKDo74Wy1AdXYlABgmqzca/view?usp=sharing" title="Download APK" target="_blank"><i class="bx bx-download"></i></a>
+          <!-- 13. AI Interview Simulator -->
+          <div class="portfolio-item filter-web hidden-item">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="assets/img/portfolio/ai/ai-interviewer/AI-Interviewer1.png" alt="AI Interview Simulator">
+                <div class="project-card__overlay">
+                  <a href="assets/img/portfolio/ai/ai-interviewer/AI-Interviewer1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="AI Interview Simulator"><i class="bx bx-fullscreen"></i></a>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__category">Streamlit / HR Tech</span>
+                <h4 class="project-card__title">AI Interview Simulator</h4>
+                <div class="project-card__tags">
+                  <span class="tech-chip">Streamlit</span>
+                  <span class="tech-chip">OpenAI</span>
+                  <span class="tech-chip">Python</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="portfolio/ai/ai-interviewer-details.html" class="btn-action btn-action--primary portfolio-details-lightbox" data-glightbox="type: external"><i class="bx bx-link-external"></i> Details</a>
+                  <a href="https://interview-tool-00tfo4nj6mxyp.streamlit.app/" target="_blank" class="btn-action btn-action--demo"><i class="bx bx-play-circle"></i> Demo</a>
+                  <a href="https://github.com/Sama-ndari/Interview-tool" target="_blank" class="btn-action btn-action--ghost"><i class="bx bx-code-alt"></i> Code</a>
                 </div>
               </div>
             </div>
@@ -708,8 +831,16 @@
 
         </div>
 
+        <!-- Show More Button -->
+        <div class="show-more-wrap" data-aos="fade-up" data-aos-delay="300">
+          <button class="btn-show-more" id="btnShowMore">
+            <span>View All Projects</span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+
       </div>
-    </section> <!--End Portfolio Section -->
+    </section> <!-- End Projects Section -->
 
 
     
