@@ -136,7 +136,7 @@
                 <h3>Key Features</h3>
                 <ul>
                   <li>
-                    <strong>Gold Standard Dataset</strong>: 40,000+ sentences
+                    <strong>Gold Standard Dataset</strong>: <span class="live-sentences">4,500</span>+ sentences
                     and audio clips with automated cleaning and validation
                   </li>
                   <li>
@@ -219,5 +219,19 @@
 
     <!-- Template Main JS File -->
     <script src="../../assets/js/main.js"></script>
+
+    <script>
+      (async function () {
+        try {
+          const res = await fetch('https://huggingface.co/datasets/Ijwi-ry-Ikirundi-AI/Kirundi_Open_Speech_Dataset/raw/main/metadata.csv');
+          if (!res.ok) return;
+          const text = await res.text();
+          const rows = text.split('\n').filter(function (l) { return l.trim().length > 0; }).length - 1;
+          document.querySelectorAll('.live-sentences').forEach(function (el) {
+            el.textContent = rows.toLocaleString();
+          });
+        } catch (_) {}
+      })();
+    </script>
   </body>
 </html>
