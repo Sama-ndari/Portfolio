@@ -1384,4 +1384,78 @@ section {
 }
 /* Featured Project styles moved to featured.css */
 
+/*--------------------------------------------------------------
+# Live Counter Loading Pulse
+--------------------------------------------------------------*/
+.live-counter.is-loading {
+  display: inline-block;
+  width: 50px;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e0e7ef 25%, #f0f4f8 50%, #e0e7ef 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/*--------------------------------------------------------------
+# CV Download Badges
+--------------------------------------------------------------*/
+.cv-downloads {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.cv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.cv-badge i {
+  font-size: 16px;
+}
+
+.cv-badge--primary {
+  background: #0563bb;
+  color: #fff;
+  border-color: #0563bb;
+}
+
+.cv-badge--primary:hover {
+  background: #0452a0;
+  border-color: #0452a0;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.35);
+}
+
+.cv-badge--outline {
+  background: transparent;
+  color: #0563bb;
+  border-color: #0563bb;
+}
+
+.cv-badge--outline:hover {
+  background: #0563bb;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.35);
+}
 
