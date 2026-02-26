@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Kirundi AI — Case Study</title>
+    <title>Kirundi AI | Case Study</title>
     <meta content="KPI case study: building AI infrastructure for a low-resource African language" name="description" />
 
     <link href="../../../assets/img/favicon.ico" rel="icon" />
@@ -30,14 +30,14 @@
                 <div class="d-flex align-items-center mb-4">
                   <span class="badge bg-primary bg-opacity-10 text-primary me-3 p-2" style="font-size: 1.2rem;"><i class="bi bi-rocket-takeoff"></i></span>
                   <div>
-                    <h2 class="mb-0">Ijwi ry'Ikirundi AI — Case Study</h2>
+                    <h2 class="mb-0">Ijwi ry'Ikirundi AI | Case Study</h2>
                     <small class="text-muted">Nov 2025 – Present | Founder &amp; Technical Lead</small>
                   </div>
                 </div>
 
                 <h4 class="fw-bold text-danger mb-2">The Problem</h4>
                 <p>
-                  Kirundi is spoken by over 12 million people across Burundi, DR Congo, and diaspora communities — yet it had 
+                  Kirundi is spoken by over 12 million people across Burundi, DR Congo, and diaspora communities, yet it had 
                   <strong>zero AI-ready datasets</strong>. No speech recognition. No machine translation. No NLP models. 
                   Major AI platforms (OpenAI, Google, Meta) don't support Kirundi at all. Without data, the language risked 
                   being permanently excluded from the AI era.
@@ -46,10 +46,10 @@
                 <h4 class="fw-bold mb-2" style="color: #0563bb;">The Solution</h4>
                 <p>I designed and built a complete end-to-end data infrastructure from scratch:</p>
                 <ul>
-                  <li><strong>Zero-cost contribution platform</strong> — a web app (GitHub Pages + Google Apps Script as backend API) that lets anyone submit Kirundi sentences and audio recordings without installing anything.</li>
-                  <li><strong>Automated ETL pipeline</strong> — Python scripts (Pandas, RegEx) that pull raw contributions, clean and validate them, deduplicate entries, and compute metadata (word count, character count, speaker info).</li>
-                  <li><strong>Dataset hosting on Hugging Face</strong> — versioned via Git LFS, publicly accessible, and structured for ASR, TTS, and NLP downstream tasks.</li>
-                  <li><strong>Open-source community</strong> — CONTRIBUTING.md, issue templates, and contributor onboarding to scale data collection beyond one person.</li>
+                  <li><strong>Zero-cost contribution platform</strong>: a web app (GitHub Pages + Google Apps Script as backend API) that lets anyone submit Kirundi sentences and audio recordings without installing anything.</li>
+                  <li><strong>Automated ETL pipeline</strong>: Python scripts (Pandas, RegEx) that pull raw contributions, clean and validate them, deduplicate entries, and compute metadata (word count, character count, speaker info).</li>
+                  <li><strong>Dataset hosting on Hugging Face</strong>: versioned via Git LFS, publicly accessible, and structured for ASR, TTS, and NLP downstream tasks.</li>
+                  <li><strong>Open-source community</strong>: CONTRIBUTING.md, issue templates, and contributor onboarding to scale data collection beyond one person.</li>
                 </ul>
 
                 <h4 class="fw-bold text-success mb-3">Measurable Results</h4>
@@ -82,14 +82,14 @@
 
                 <h4 class="fw-bold mb-2" style="color: #6f42c1;">Key Technical Decisions</h4>
                 <ul>
-                  <li><strong>Zero hosting cost</strong> — chose GitHub Pages + Apps Script over a traditional server, eliminating recurring expenses for a community project in a low-income context.</li>
-                  <li><strong>Git LFS for audio</strong> — audio clips are large; Git LFS allows versioned storage on Hugging Face without bloating the repository.</li>
-                  <li><strong>CSV-first data format</strong> — kept the dataset in simple CSV (not Parquet/Arrow) so contributors and researchers in Burundi with limited tooling can inspect and contribute without specialized software.</li>
+                  <li><strong>Zero hosting cost</strong>: chose GitHub Pages + Apps Script over a traditional server, eliminating recurring expenses for a community project in a low-income context.</li>
+                  <li><strong>Git LFS for audio</strong>: audio clips are large; Git LFS allows versioned storage on Hugging Face without bloating the repository.</li>
+                  <li><strong>CSV-first data format</strong>: kept the dataset in simple CSV (not Parquet/Arrow) so contributors and researchers in Burundi with limited tooling can inspect and contribute without specialized software.</li>
                 </ul>
 
                 <h4 class="fw-bold mb-2" style="color: #e65100;">Why This Matters</h4>
                 <p class="mb-0">
-                  This is not a side project — it's <strong>digital sovereignty infrastructure</strong>. 
+                  This is not a side project. It's <strong>digital sovereignty infrastructure</strong>. 
                   Every sentence in this dataset moves Kirundi closer to having working speech recognition, 
                   machine translation, and AI assistants. The architecture is designed to be replicated for 
                   other low-resource African languages. The entire stack is open-source and documented.
